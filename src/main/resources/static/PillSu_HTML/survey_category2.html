@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../PillSu_CSS/survey.css">
+    <title>survey_selection2</title>
+</head>
+
+<body>
+    <div class="survey">
+        <div class="survey_logo">
+            <a href="../html/PillSu_main.html">PillSu</a>
+        </div>
+        <div class="survey_question">
+            {{/여기에 질문이 나온다}}부트 || 뷰
+        </div>
+        <div class="survey_select_area"> 
+            <!-- 선택지가 4개일때는 4개만 보이고 5개이면 5개가 보이게 코드를 짜야 한다. 조건에 따라 hidden 속성을 줘야 할 것 같음. -->
+            <form action="">
+                <div class="survey_question2_bellyache" id="bellyache">
+                    <label><input type="checkbox" style="margin-bottom:auto;" id="checkbox_bellyache">복통이나 속쓰림이 자주 발생해요</input></label>
+                </div>
+            </form>
+            <form>
+                <div class="survey_question2_constipation" id="constipation">
+                    <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_constipation">변비가 있어요</input></label>
+                </div>
+            </form>
+            <form>
+                <div class="survey_question2_diarrhea" id="diarrhea">
+                    <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_diarrhea">변이 묽은 편이에요</input></label>
+                </div>
+            </form>
+            <form>
+                <div class="survey_question2_alcoholTrash" id="alcoholTrash">
+                    <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_alcoholTrash">술을 마시면 얼굴이나 몸이 붉어지고 소화가 안되요</input></label>
+                </div>
+            </form>
+            <form>
+                <div class="survey_question2_residualUrine" id="residualUrine">
+                    <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_residualUrine">잔뇨감이 있어요</input></label>
+                </div>
+            </form>
+            <form>
+                <div class="survey_question2_disgestionInterest" id="disgestionInterest">
+                    <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_disgestionInterest">해당사항은 없지만 관심있음</input></label>
+                </div>
+            </form>
+        </div>
+        <div class="survey_pagetrans">
+            <span style="width: 100%;">
+                <label for="question2_before">
+                    < <button style="margin-right: 20%; width: 30%;" id="question2_before">
+                        <a>이전</a>
+                        </button>
+                </label>
+                <label for="question2_next">
+                    <button style="width: 30%;" id="question2_next" >
+                        <a>다음</a>
+                    </button>
+                    >
+                </label>
+            </span>
+        </div>
+    </div>
+    <button id="score_check_btn">변수 값 확인용</button>
+    <script type="text/javascript" src="../PillSu_JS/survey2.js">
+        
+    </script> 
+
+</body>
+
+</html>
+<!-- 작업완료 -->

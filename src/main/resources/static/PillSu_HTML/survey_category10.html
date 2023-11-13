@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../PillSu_CSS/survey.css">
+    <title>survey_selection10</title>
+</head>
+
+<body>
+    <div class="survey">
+        <div class="survey_logo">
+            <a href="../html/PillSu_main.html">PillSu</a>
+        </div>
+        <div class="survey_question">
+            {{/여기에 질문이 나온다}}부트 || 뷰
+        </div>
+        <div class="survey_select_area">
+            <!-- 선택지가 4개일때는 4개만 보이고 5개이면 5개가 보이게 코드를 짜야 한다. 조건에 따라 hidden 속성을 줘야 할 것 같음. -->
+            <div class="survey_question10_stiff" id="stiff"> 
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_stiff"> 몸이 뻐근해요 </label>
+            </div> <!-- class, id, id 수정 -->
+
+
+            <div class="survey_question10_exhaustion" id="exhaustion">
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_exhaustion"> 급격히 피로해져요 </label>
+            </div>
+
+
+            <div class="survey_question10_debilitation" id="debilitation">
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_debilitation"> 신체능력이 저하된 것 같아요</label>
+            </div>
+
+
+            <div class="survey_question10_energyInterest" id="energyInterest">
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_energyInterest"> 해당사항 없지만 관심있음</label>
+            </div>
+
+
+        </div>
+        <div class="survey_pagetrans">
+            <span style="width: 100%;">
+                <label for="question10_before"> <!-- 라벨숫자 수정 -->
+                    < <button style="margin-right: 20%; width: 30%;" id="question10_before"> <!-- id 수정 -->
+                        <a>이전</a>
+                        </button>
+                </label>
+                <label for="question10_next"> <!-- 라벨숫자 수정 -->
+                    <button style="width: 30%;" id="question10_next"> <!-- id 수정 -->
+                        <a>다음</a>
+                    </button>
+                    >
+                </label>
+            </span>
+        </div>
+    </div>
+    <button id="score_check_btn">변수 값 확인용</button>
+    <script type="text/javascript" src="../PillSu_JS/survey10.js"> // 참조파일 경로 수정
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- 작업완료 -->

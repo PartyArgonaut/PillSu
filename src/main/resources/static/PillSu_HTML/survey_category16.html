@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../PillSu_CSS/survey.css">
+    <title>survey_selection16</title>
+</head>
+
+<body>
+    <div class="survey">
+        <div class="survey_logo">
+            <a href="../html/PillSu_main.html">PillSu</a>
+        </div>
+        <div class="survey_question">
+            {{/여기에 질문이 나온다}}부트 || 뷰
+        </div>
+        <div class="survey_select_area">
+            <!-- 선택지가 4개일때는 4개만 보이고 5개이면 5개가 보이게 코드를 짜야 한다. 조건에 따라 hidden 속성을 줘야 할 것 같음. -->
+            <div class="survey_question16_FHLD" id="FHLD"> 
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_FHLD"> 간질환 있음 </label>
+            </div> <!-- class, id, id 수정 -->
+
+
+            <div class="survey_question16_FHVD" id="FHVD">
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_FHVD"> 혈관질환 있음 </label>
+            </div>
+
+
+            <div class="survey_question16_nonFamilyHistory" id="nonFamilyHistory">
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_nonFamilyHistory"> 가족력 없음</label>
+            </div>
+
+
+        </div>
+        <div class="survey_pagetrans">
+            <span style="width: 100%;">
+                <label for="question16_before"> <!-- 라벨숫자 수정 -->
+                    < <button style="margin-right: 20%; width: 30%;" id="question16_before"> <!-- id 수정 -->
+                        <a>이전</a>
+                        </button>
+                </label>
+
+                <label for="question16_complete"> <!-- 라벨숫자 수정 -->
+                    <button style="width: 30%;" id="question16_complete"> <!-- id 수정 -->
+                        <a>설문 완료</a> <!-- 설문 완료 페이지에서 해줘야 되는 작업이 다름 -->
+                    </button> 
+                </label>
+                <!-- 여기에 폼태그 달아서 dto로 데이터 넘겨주는 작업을 해야됨 -->
+            </span>
+        </div>
+    </div>
+    <button id="score_check_btn">변수 값 확인용</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../PillSu_JS/survey16.js"> // 참조파일 경로 수정
+
+    </script>
+
+</body>
+
+</html>

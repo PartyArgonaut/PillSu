@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../PillSu_CSS/survey.css">
+    <title>survey_selection1</title>
+</head>
+
+<body>
+    <div class="survey">
+        <div class="survey_logo">
+            <a href="PillSu_main.html">PillSu</a>
+        </div>
+        <div class="survey_question">
+            {{/여기에 질문이 나온다}}부트 || 뷰
+        </div>
+        <div class="survey_select_area">
+            <!-- 선택지가 4개일때는 4개만 보이고 5개이면 5개가 보이게 코드를 짜야 한다. 조건에 따라 hidden 속성을 줘야 할 것 같음. -->
+            <!-- <form action="" method="post"> -->
+                <!-- 여기서 액션을 어디로 보내야 되는지 -->
+                <div class="survey_question1_wound" id="wound">
+                    <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_wound"> 상처가 잘 낫지 </label>
+                </div>
+
+
+                <div class="survey_question1_asleep" id="asleep">
+                    <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_asleep"> 손발끝이 자주 저려요</label>
+                </div>
+
+
+                <div class="survey_question1_bleed" id="bleed">
+                    <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_bleed"> 잇몸이 붓고 피가 나요</label>
+                </div>
+
+
+                <div class="survey_question1_pale" id="pale">
+                    <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_pale"> 얼굴이 자주 창백해져요</label>
+                </div>
+
+
+                <div class="survey_question1_veinInterest" id="veinInterest">
+                    <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_veinInterest"> 해당사항 없지만 관심있음</label>
+                </div>
+            
+        </div>
+        <div class="survey_pagetrans">
+            <span style="width: 100%;">
+                <label >
+
+                </label>
+                
+                    <label>
+                        <button style="width: 30%;" id="question1_nextLevel" type="submit">
+                            <a>다음</a>
+                        </button>
+                        >
+                    </label>
+                
+            </span>
+        </div>
+    </div>
+    <button id="score_check_btn">변수 값 확인용</button>
+    <script type="text/javascript" src="../PillSu_JS/survey1.js">
+
+
+    </script>
+
+</body>
+
+</html>
+<!-- 작업완료 -->

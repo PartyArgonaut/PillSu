@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../PillSu_CSS/survey.css">
+    <title>survey_selection14</title>
+</head>
+
+<body>
+    <div class="survey">
+        <div class="survey_logo">
+            <a href="../html/PillSu_main.html">PillSu</a>
+        </div>
+        <div class="survey_question">
+            {{/여기에 질문이 나온다}}부트 || 뷰
+        </div>
+        <div class="survey_select_area">
+            <!-- 선택지가 4개일때는 4개만 보이고 5개이면 5개가 보이게 코드를 짜야 한다. 조건에 따라 hidden 속성을 줘야 할 것 같음. -->
+            <div class="survey_question14_noFish" id="noFish"> 
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_noFish"> 생선을 안먹는다 </label>
+            </div> <!-- class, id, id 수정 -->
+
+
+            <div class="survey_question14_noVegetable" id="noVegetable">
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_noVegetable"> 채소를 안먹는다 </label>
+            </div>
+
+
+            <div class="survey_question14_noFruit" id="noFruit">
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_noFruit"> 과일을 안먹는다 </label>
+            </div>
+
+
+            <div class="survey_question14_noMeat" id="noMeat">
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_noMeat"> 고기를 안먹는다 </label>
+            </div>
+
+
+            <div class="survey_question14_frequentSweet" id="frequentSweet">
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_frequentSweet"> 단 음식을 자주 먹는다 </label>
+            </div>
+
+
+            <div class="survey_question14_notEat" id="notEat">
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_notEat"> 식사를 자주 거른다 </label>
+            </div>
+
+
+            <div class="survey_question14_none" id="none">
+                <label><input type="checkbox" style="margin-bottom: auto;" id="checkbox_none"> 해당사항 없음 </label>
+            </div>
+
+
+        </div>
+        <div class="survey_pagetrans">
+            <span style="width: 100%;">
+                <label for="question14_before"> <!-- 라벨숫자 수정 -->
+                    < <button style="margin-right: 20%; width: 30%;" id="question14_before"> <!-- id 수정 -->
+                        <a>이전</a>
+                        </button>
+                </label>
+                <label for="question14_next"> <!-- 라벨숫자 수정 -->
+                    <button style="width: 30%;" id="question14_next"> <!-- id 수정 -->
+                        <a>다음</a>
+                    </button>
+                    >
+                </label>
+            </span>
+        </div>
+    </div>
+    <button id="score_check_btn">변수 값 확인용</button>
+    <script type="text/javascript" src="../PillSu_JS/survey14.js"> // 참조파일 경로 수정
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- 작업완료 -->

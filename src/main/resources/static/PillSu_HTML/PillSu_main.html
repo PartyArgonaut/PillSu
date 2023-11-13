@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PillSu Main</title>
+
+    <style>
+        .head {
+            background: red;
+            width: 1860px;
+            height: 200px;
+            position: fixed;
+            /* display: flex; */
+            margin: 0px;
+        }
+
+        #customService {
+            background-color: white;
+            width: 100px auto;
+            height: 50px;
+            position: fixed;
+            left: 1000px;
+            text-align: center;
+        }
+
+        #cart {
+            background-color: white;
+            width: 100px;
+            height: 50px;
+            position: fixed;
+            left: 1150px;
+            text-align: center;
+        }
+
+        #login {
+            background-color: white;
+            width: 100px;
+            height: 50px;
+            position: fixed;
+            left: 1300px;
+            text-align: center;
+        }
+
+        #logo {
+            left: 1000px;
+        }
+
+        .justBg {
+            background-color: yellow;
+            width: auto;
+            height: 200px;
+            top: 300px;
+        }
+
+        .ad_img {
+            background-size: 100%;
+            width: auto;
+            height: 400px;
+            top: 300px;
+            background-image: url(https://cdn.pixabay.com/photo/2023/10/01/14/40/medicine-8287535_1280.jpg);
+        }
+
+        .body_img {
+            background-color: salmon;
+            width: auto;
+            height: 700px;
+            background-image: url(https://cdn.pixabay.com/photo/2018/01/17/07/14/pharmacy-3087599_1280.jpg);
+            background-size: 100%;
+        }
+
+        .footer {
+            background-color: aqua;
+            width: auto;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 헤더 부분 -->
+    <div class="head">
+        <i id="logo">PillSu</i>
+        <i id="customService">고객센터</i>
+        <i id="cart">shopping cart</i>
+        <i id="login">log in</i>
+    </div>
+
+    <!-- 헤더부분 뒷배경 -->
+    <div class="justBg"></div>
+
+    <!-- 홍보 이미지 부분 -->
+    <div class="ad_img"></div>
+
+    <!-- 사이트 배경에 맞는 이미지-->
+    <div class="body_img">
+        <input id="survey" type="button" value="설문조사하기" style="
+            width: 200px;
+            height: 80px;
+            position: relative;
+            left: 450px;
+            top: 500px;
+        " />
+
+        <input id="survey" type="button" value="스토어가기" style="
+            width: 200px;
+            height: 80px;
+            position: relative;
+            left: 700px;
+            top: 500px;
+        " />
+    </div>
+
+    <!-- 푸터 -->
+    <div class="footer">푸터내용 푸터푸터푸터내용푸터</div>
+</body>
+
+</html>
