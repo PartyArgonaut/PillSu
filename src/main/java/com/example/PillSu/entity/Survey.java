@@ -1,4 +1,4 @@
-package com.example.pillsuproject.Entity;
+package com.example.PillSu.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

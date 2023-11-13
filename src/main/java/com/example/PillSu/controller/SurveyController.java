@@ -1,20 +1,18 @@
-package com.example.pillsuproject.Controller;
+package com.example.PillSu.controller;
 
-import com.example.pillsuproject.DTO.surveyForm;
-import com.example.pillsuproject.Entity.Survey;
-import com.example.pillsuproject.Repository.SurveyRepository;
+import com.example.PillSu.dto.surveyForm;
+import com.example.PillSu.entity.Survey;
+import com.example.PillSu.repository.SurveyRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-
-//@RestController
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
-//@RestController
-//@RequestMapping("/api")
 @RequiredArgsConstructor
 @Slf4j
 public class SurveyController {
@@ -140,3 +138,4 @@ public class SurveyController {
 
 
 }
+

@@ -1,7 +1,8 @@
-package com.example.pillsuproject.DTO;
+package com.example.PillSu.dto;
 
 
-import com.example.pillsuproject.Entity.Survey;
+import com.example.PillSu.entity.Survey;
+import com.example.PillSu.entity.Survey;
 import lombok.ToString;
 
 @ToString
