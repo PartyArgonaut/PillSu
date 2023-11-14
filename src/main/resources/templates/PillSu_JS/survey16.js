@@ -214,7 +214,7 @@ srv16_question15_complete.addEventListener('click', function () { //이 메소�
         probiotics:resultSix,
         omega3:resultSeven,
         octacosanol:resultEight,
-        milkThistle:resultNine,
+        milkthistle:resultNine,
         lutein:resultTen,
         gammaLenolenicAcid:resultEleven,
         pantothenicAcid:resultTwelve,
@@ -228,7 +228,7 @@ srv16_question15_complete.addEventListener('click', function () { //이 메소�
       data: JSON.stringify(dto),
       success: function(response) {
         window.location.href = '/surveyComplete'
-        localStorage.clear();
+//        localStorage.clear();
       },
       error: function(error) {
         console.log("데이터 제출 실패")

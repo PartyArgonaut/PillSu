@@ -1,7 +1,7 @@
 package com.example.PillSu.controller;
 
 import com.example.PillSu.dto.surveyForm;
-import com.example.PillSu.entity.Survey;
+import com.example.PillSu.entity.SurveyResult;
 import com.example.PillSu.repository.SurveyRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -118,13 +118,11 @@ public class SurveyController {
     } // 여기에서 model로 form데이터 받아서
 
     @PostMapping("/surveyForm")
-    public ResponseEntity<String> createSurvey(@RequestBody surveyForm dto){
-        log.info(dto.toString());
-        Survey survey = dto.toEntity();
-        log.info(survey.toString());
-
-        Survey saved = surveyRepository.save(survey);
-
+    public ResponseEntity<String> createSurvey(@RequestBody surveyForm surveyform){
+        System.out.println(surveyform.toString());
+        SurveyResult survey = surveyform.toEntity();
+        System.out.println(survey.toString());
+        SurveyResult surveysaved = surveyRepository.save(survey);
         return ResponseEntity.ok("Data received successfully");
     }
 

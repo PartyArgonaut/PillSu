@@ -1,17 +1,12 @@
 package com.example.PillSu.repository;
 
-import com.example.PillSu.entity.Survey;
-import com.example.PillSu.entity.Survey;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
+import com.example.PillSu.entity.SurveyResult;
 
-@Repository
-public interface SurveyRepository extends CrudRepository<Survey, Long> {
+import org.springframework.data.jpa.repository.JpaRepository;
 
-    @Override
-    ArrayList<Survey> findAll();
+public interface SurveyRepository extends JpaRepository<SurveyResult, Long> {
+
 
 
 }

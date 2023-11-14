@@ -14,10 +14,11 @@ import java.sql.Date;
 @NoArgsConstructor
 @DynamicInsert
 
+
 public class Member {
     @Id
     @Column
-
+    @JoinColumn
     private String member_Email;
     @Column
     private String member_Password;
