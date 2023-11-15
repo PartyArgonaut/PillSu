@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myInfo</title>
+</head>
+<body>
+{{#memberList}}
+    <h1>내 정보 관리</h1>
+    <div>
+
+        <div>
+            <span>계정 정보</span>
+        </div>
+        <div>
+            <span>{{memberEmail}}</span>
+        </div>
+    </div>
+    <br>
+    <div>
+
+        <div>
+            <span>전화 번호</span>
+        </div>
+        <div>
+            <span>{{memberContactNumber}}</span>
+        </div>
+        
+    </div>
+
+    <div>
+
+        <div>
+            <span>프로필</span>
+        </div>
+        <div>
+            <span>{{memberName}}</span>
+            <span>{{memberBirthDate}}</span>
+            <span>{{memberGender}}</span>
+
+        </div>
+    </div>
+
+    <button href="#" type="submit">회원탈퇴</button>
+{{/memberList}}
+</body>
+</html>

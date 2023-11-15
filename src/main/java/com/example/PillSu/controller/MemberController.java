@@ -25,8 +25,8 @@ public class MemberController {
 
     @PostMapping("/joins/new")
     public String createMember(MemberForm form) {
-         //1. 디티오 > 엔티티 변환
-        Member member = form.toEntity() ;
+        //1. 디티오 > 엔티티 변환
+        Member member = form.toEntity();
         System.out.println(member.toString());
 
         // 2. 리포지토리에게 엔티티를 DB로 저장하게 한다
