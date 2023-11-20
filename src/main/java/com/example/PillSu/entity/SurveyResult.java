@@ -15,35 +15,34 @@ public class SurveyResult {
 
     @Column(name = "Member_Email")
     private String memberEmail;
-    @Column(name= "Theanine")
+    @Column(name = "Theanine")
     private String theanine;
-    @Column(name="Iron")
+    @Column(name = "Iron")
     private String iron;
-    @Column(name="Vitamin_B")
+    @Column(name = "Vitamin_B")
     private String vitaminB;
-    @Column(name="Vitamin_C")
+    @Column(name = "Vitamin_C")
     private String vitaminC;
-    @Column(name="Vitamin_D")
+    @Column(name = "Vitamin_D")
     private String vitaminD;
-    @Column(name="Coenzyme_Q")
+    @Column(name = "Coenzyme_Q")
     private String coenzymeQ;
-    @Column(name="Probiotics")
+    @Column(name = "Probiotics")
     private String probiotics;
-    @Column(name="Omega_3")
+    @Column(name = "Omega_3")
     private String omega3;
-    @Column(name="Octacosanol")
+    @Column(name = "Octacosanol")
     private String octacosanol;
-    @Column(name="MilkThistle")
+    @Column(name = "MilkThistle")
     private String milk_thistle;
-    @Column(name="Lutein")
+    @Column(name = "Lutein")
     private String lutein;
-    @Column(name="Gamma_Linolenic_Acid")
+    @Column(name = "Gamma_Linolenic_Acid")
     private String gammaLenolenicAcid;
-    @Column(name="Pantothenic_Acid")
+    @Column(name = "Pantothenic_Acid")
     private String pantothenicAcid;
-    @Column(name="Biotin")
+    @Column(name = "Biotin")
     private String biotin;
-
 
 
     public SurveyResult(Long surveyId, String memberEmail, String theanine, String iron,

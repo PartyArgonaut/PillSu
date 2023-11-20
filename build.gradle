@@ -1,34 +1,68 @@
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '3.1.5'
-	id 'io.spring.dependency-management' version '1.1.3'
+    id 'java'
+    id 'org.springframework.boot' version '3.1.5'
+    id 'io.spring.dependency-management' version '1.1.3'
+
+    //QueryDsl 관련 명령어를 gradle 탭에 생성해 준다. (권장 사항)
+    id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
+
 }
+
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	sourceCompatibility = '17'
+    sourceCompatibility = '17'
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-mustache'
-	implementation 'org.springframework.boot:spring-boot-starter-validation'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-mustache'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
 
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'com.mysql:mysql-connector-j'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'com.mysql:mysql-connector-j'
 
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+
+    implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
+    annotationProcessor 'com.querydsl:querydsl-apt:5.0.0:jakarta'
+    annotationProcessor 'jakarta.annotation:jakarta.annotation-api'
+    annotationProcessor 'jakarta.persistence:jakarta.persistence-api'
+
+    // https://mvnrepository.com/artifact/org.modelmapper/modelmapper
+    implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.3.9'
+    /* ModelMapper -> 상품 등록 시 전달받은 DTO 객체를 entity로 변환해야하고,
+                      상품 조회 시 반대로 entity를 DTO 객체로 변환하여 전달해야한다.
+                      이 방법은 멤버 변수가 많아진다면 상당한 시간을 소모하게 되는데,
+                      ModelMapper는이를 도와주는 라이브러리이다.
+                      이 라이브러리는 서로 다른 클래스의 값을 필드 이름과 자료형이 같으면
+                      getter, setter를 통해 값을 복사하여 객체를 반환하여준다.
+      */
+
+    /* org.springframework.beans.factory.BeanCreationException:
+    Error creating bean with name 'entityManagerFactory' defined in class path resource
+     */
+    implementation group: 'org.javassist', name: 'javassist', version: '3.15.0-GA'
+
+    /*
+    프로젝트 중간에 타임리프를 추가하였다.
+         */
+
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+
 }
 
 //tasks.named('test') {
@@ -36,8 +70,25 @@ dependencies {
 //}
 
 jar {
-	enabled = true;
+    enabled = true;
 }
 
+//querydsl 추가 시작
+def querydslDir = "$buildDir/generated/querydsl"
 
-//	implementation 'org.springframework.boot:spring-boot-devtools'
+querydsl {
+    jpa = true
+    querydslSourcesDir = querydslDir
+}
+sourceSets {
+    main.java.srcDir querydslDir
+}
+compileQuerydsl {
+    options.annotationProcessorPath = configurations.querydsl
+}
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+    querydsl.extendsFrom compileClasspath
+}

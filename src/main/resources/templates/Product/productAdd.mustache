@@ -33,40 +33,40 @@
         <tr>
             <th>상품 번호</th>
             <td>
-                <input type="text" name="product_ID">
+                <input type="text" name="productID">
 
             </td>
         </tr>
         <tr>
             <th>상품명</th>
             <td>
-                <input type="text" name="product_Name">
+                <input type="text" name="productName">
 
             </td>
         </tr>
         <tr>
             <th>가 격</th>
             <td>
-                <input type="text" name="product_Price">
+                <input type="text" name="productPrice">
             </td>
         </tr>
         <tr>
             <th>카테고리</th>
             <td>
-                <select name="product_Category1" onchange="handleOnChange(this)">
-                    <option name="product_Category1" selected>1차분류</option>
-                    <option name="product_Category1" value="0">혈관</option>
-                    <option name="product_Category1" value="2">눈</option>
-                    <option name="product_Category1" value="3">두뇌활동</option>
-                    <option name="product_Category1" value="4">피로감</option>
-                    <option name="product_Category1" value="5">뼈,관절</option>
-                    <option name="product_Category1" value="6">면역</option>
-                    <option name="product_Category1" value="7">간</option>
-                    <option name="product_Category1" value="8">여성</option>
-                    <option name="product_Category1" value="9">에너지,운동능력</option>
+                <select name="productCategory1">
+                    <option selected>1차분류</option>
+                    <option value="0">혈관</option>
+                    <option value="1">눈</option>
+                    <option value="2">두뇌활동</option>
+                    <option value="3">피로감</option>
+                    <option value="4">뼈,관절</option>
+                    <option value="5">면역</option>
+                    <option value="6">간</option>
+                    <option value="7">여성</option>
+                    <option value="8">에너지,운동능력</option>
                 </select>
 
-                <select name="product_Category2">
+                <select name="productCategory2">
                     <option selected>2차분류</option>
                     <option value="0">혈관</option>
                     <option value="1">소화,장</option>
@@ -80,7 +80,7 @@
                     <option value="9">에너지,운동능력</option>
                 </select>
 
-                <select name="product_Category3">
+                <select name="productCategory3">
                     <option selected>3차분류</option>
                     <option value="0">혈관</option>
                     <option value="1">소화,장</option>
@@ -93,7 +93,8 @@
                     <option value="8">여성</option>
                     <option value="9">에너지,운동능력</option>
                 </select>
-                <select name="product_Category4">
+
+                <select name="productCategory4">
                     <option selected>4차분류</option>
                     <option value="0">혈관</option>
                     <option value="1">소화,장</option>
@@ -113,7 +114,7 @@
         <tr>
             <th>상품 설명</th>
             <td>
-                    <textarea name="product_Description">
+                    <textarea name="productDescription">
 
                     </textarea>
             </td>
@@ -121,7 +122,9 @@
         <tr>
             <th>상품 이미지</th>
             <td>
-                <input type="file" value="파일 선택" multiple>
+                <input type="file" name="" value="파일 선택">
+                <!--                <input type="file" value="파일 선택">-->
+                <!--                <input type="file" value="파일 선택">-->
 
             </td>
         </tr>

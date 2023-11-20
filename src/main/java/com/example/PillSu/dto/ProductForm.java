@@ -6,33 +6,129 @@ package com.example.PillSu.dto;
 
 import com.example.PillSu.entity.Product;
 
-import org.springframework.data.relational.core.sql.In;
 
-import java.sql.Date;
+import com.querydsl.core.annotations.QueryProjection;
+import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import org.modelmapper.ModelMapper;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
+@NoArgsConstructor //기본생성자 없다고 자꾸 오류떠서 애노테이션 달음
+@Getter
+@Setter
+@ToString
 public class ProductForm {
-    private String product_ID;
-    private String product_Name;
-    private Integer product_Price;
-    private String product_Description;
-    private String product_Image1;
-    private String product_Image2;
-    private String product_Image3;
+
+    //    @NotBlank(message = "상품번호를 등록해주세요")
+    private String productID;
+
+    //    @NotBlank(message = "상품명을 등록해주세요")
+    private String productName;
+
+    //    @NotBlank(message = "상품가격을 등록해주세요")
+    private Integer productPrice;
+
+    //    @NotBlank(message = "상세 내용을 입력해주세요")
+    private String productDescription;
+
+    private String productImage1;
+    private String productImage2;
+    private String productImage3;
+    private Integer productCategory1;
+    private Integer productCategory2;
+    private Integer productCategory3;
+    private Integer productCategory4;
 
 
-    public ProductForm(String product_ID, String product_Name, Integer product_Price, String product_Description, String product_Image1, String product_Image2, String product_Image3) {
-        this.product_ID = product_ID;
-        this.product_Name = product_Name;
-        this.product_Price = product_Price;
-        this.product_Description = product_Description;
-        this.product_Image1 = product_Image1;
-        this.product_Image2 = product_Image2;
-        this.product_Image3 = product_Image3;
 
+    // 여기서부터는 책 보면서 추가한 것들.
+
+    // 상품 저장 후 수정할 때 상품 이미지 정보를 저장하는 리스트.
+    private List<Product> productImgList = new ArrayList<>();
+
+    /*상품 이미지 아이디를 저장하는 리스트. 상품 등록시에는 아직 상품의 이미지를
+    저장하지 않았기때문에 아무 값도 들어가 있지않고 수정 시 이미지 아이디를
+    담아둘 용도로 사용한다.
+     */
+    private List<Long> productImgIds = new ArrayList<>();
+
+
+
+    @QueryProjection
+    public ProductForm(String productID, String productName,
+                       Integer productPrice, String productDescription,
+                       String productImage1, String productImage2,
+                       String productImage3, Integer productCategory1,
+                       Integer productCategory2, Integer productCategory3,
+                       Integer productCategory4)
+    {
+        this.productID = productID;
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.productDescription = productDescription;
+        this.productImage1 = productImage1;
+        this.productImage2 = productImage2;
+        this.productImage3 = productImage3;
+        this.productCategory1 = productCategory1;
+        this.productCategory2 = productCategory2;
+        this.productCategory3 = productCategory3;
+        this.productCategory4 = productCategory4;
+    }
+
+    public void setProductID(String productID) {
+        this.productID = productID;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public void setProductPrice(Integer productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
+    }
+
+    public void setProductImage1(String productImage1) {
+        this.productImage1 = productImage1;
+    }
+
+    public void setProductImage2(String productImage2) {
+        this.productImage2 = productImage2;
+    }
+
+    public void setProductImage3(String productImage3) {
+        this.productImage3 = productImage3;
+    }
+
+    public void setProductCategory1(Integer productCategory1) {
+        this.productCategory1 = productCategory1;
+    }
+
+    public void setProductCategory2(Integer productCategory2) {
+        this.productCategory2 = productCategory2;
+    }
+
+    public void setProductCategory3(Integer productCategory3) {
+        this.productCategory3 = productCategory3;
+    }
+
+    public void setProductCategory4(Integer productCategory4) {
+        this.productCategory4 = productCategory4;
     }
 
 
     public Product toEntity() {
-        return new Product(product_ID, product_Name, product_Price, product_Description, product_Image1, product_Image2, product_Image3);
+        return new Product(productID, productName, productPrice, productDescription, productImage1, productImage2, productImage3, productCategory1, productCategory2, productCategory3, productCategory4);
     }
+
+
 }

@@ -13,8 +13,6 @@ import java.sql.Date;
 
 
 @Entity //(name="member")
-@NoArgsConstructor
-
 @AllArgsConstructor
 @ToString
 @Table(name="member")
